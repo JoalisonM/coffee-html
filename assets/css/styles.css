@@ -13,6 +13,7 @@
   --gray-700: #29292e;
   --gray-750: #202024;
   --gray-800: #1f2729;
+  --gray-blue-100: "#bcc3dd";
 
   --white: #FFFFFF;
   --yellow: #F9A826;
@@ -389,8 +390,14 @@ a {
   z-index: 1;
 }
 
+.modal img {
+  float: right;
+  cursor: pointer;
+}
+
 /* LOGIN ===================*/
 .form {
+  margin-top: 1rem;
   max-width: 500px;
   padding: 0.5rem 2rem;
 }
@@ -400,7 +407,7 @@ a {
   padding: 0.5rem 1rem;
   margin-bottom: 3rem;
   text-align: center;
-  border-bottom: 1px solid #bcc3dd;
+  border-bottom: 1px solid var(--gray-blue-100);
 }
 
 .form .title h2 {
@@ -515,7 +522,7 @@ footer h2 {
   height: 0.1rem;
   bottom: 0;
   left: 0;
-  background-color: #fff;
+  background-color: var(--white);
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);

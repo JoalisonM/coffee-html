@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+  <header class="headerContainer">
+    <div class="headerContent">
+      <img src="./assets/images/Coffee.png" alt="Coffee logo">
+      <nav>
+        <ul>
+          <li class="active"><a href="">Home</a></li>
+          <li><a href="">Menu</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+        <button class="signInButton" onclick="Modal.open()">
+          <img src="./assets/images/user 2.svg" alt="user icon">
+          Login
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contentContainer">
+    <section class="coffee">
+      <div class="coffeeContent">
+        <h1>Seriously</br> Good <span>Coffee</span></h1>
+        <p>Enjoy today and every day with our creamy
+          nondairy beverage options. Smooth, delicious and
+          subtly sweet.
+        </p>
+        <span class="infos">
+          <a href="" class="viewMenu">VIEW MENU</a>
+          <a href="" class="about">Learn More About Us</a>
+        </span>
+      </div>
+      <img src="./assets/images/undraw_coffee_break_j3of 1.svg" alt="Boy drinking coffee and a cup of coffee">
+    </section>
+    <section class="learnContainer">
+      <div class="item-content">
+        <img src="./assets/images/coffee.svg" alt="">
+        <div>
+          <h2>Awesome Taste</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+      <div class="item-content">
+        <img src="./assets/images/coffee.svg" alt="">
+        <div>
+          <h2>Special Blend</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+      <div class="item-content">
+        <img src="./assets/images/coffee.svg" alt="">
+        <div>
+          <h2>Freshly Roasted</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </section>
+    <section class="popularCoffeeContainer">
+      <div class="popularCoffeeContent">
+        <div class="titleContent">Our Most Popular Coffee</div>
+        <div class="popularCoffeeGrid">
+
+          <div class="coffeeGrid">
+            <div class="coffeeImg">
+              <img src="./assets/images/cafecomun.png" alt="Common coffee">
+            </div>
+            <div class="coffeeInfos">
+              <p class="title">Common coffee</p>
+              <small class="legend">300 ml</small>
+              <nav>
+                <p class="value">$6.32</p>
+                <button><img src="./assets/images/shopping-bag 1.svg" alt="bag icon button"></button>
+              </nav>
+            </div>
+          </div>
+
+          <div class="coffeeGrid">
+            <div class="coffeeImg">
+              <img src="./assets/images/cafecomleite.png" alt="Common coffee">
+            </div>
+            <div class="coffeeInfos">
+              <p class="title">Coffee Au Lait</p>
+              <small class="legend">300 ml</small>
+              <nav>
+                <p class="value">$6.32</p>
+                <button><img src="./assets/images/shopping-bag 1.svg" alt="bag icon button"></button>
+              </nav>
+            </div>
+          </div>
+
+          <div class="coffeeGrid">
+            <div class="coffeeImg">
+              <img src="./assets/images/cafecomespuma.png" alt="Common coffee">
+            </div>
+            <div class="coffeeInfos">
+              <p class="title">Coffee Latte</p>
+              <small class="legend">300 ml</small>
+              <nav>
+                <p class="value">$6.32</p>
+                <button><img src="./assets/images/shopping-bag 1.svg" alt="bag icon button"></button>
+              </nav>
+            </div>
+          </div>
+
+          <div class="coffeeGrid">
+            <div class="coffeeImg">
+              <img src="./assets/images/cafecomun.png" alt="Common coffee">
+            </div>
+            <div class="coffeeInfos">
+              <p class="title">Common coffee</p>
+              <small class="legend">300 ml</small>
+              <nav>
+                <p class="value">$6.32</p>
+                <button><img src="./assets/images/shopping-bag 1.svg" alt="bag icon button"></button>
+              </nav>
+            </div>
+          </div>
+
+          <div class="coffeeGrid">
+            <div class="coffeeImg">
+              <img src="./assets/images/cafecomleite.png" alt="Common coffee">
+            </div>
+            <div class="coffeeInfos">
+              <p class="title">Coffee Au Lait</p>
+              <small class="legend">300 ml</small>
+              <nav>
+                <p class="value">$6.32</p>
+                <button><img src="./assets/images/shopping-bag 1.svg" alt="bag icon button"></button>
+              </nav>
+            </div>
+          </div>
+
+          <div class="coffeeGrid">
+            <div class="coffeeImg">
+              <img src="./assets/images/cafecomespuma.png" alt="Common coffee">
+            </div>
+            <div class="coffeeInfos">
+              <p class="title">Coffee Latte</p>
+              <small class="legend">300 ml</small>
+              <nav>
+                <p class="value">$6.32</p>
+                <button type="button"><img src="./assets/images/shopping-bag 1.svg" alt="bag icon button"></button>
+              </nav>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- onclick="Modal.close()" -->
+  <div class="modal-overlay" onclick="Modal.close()">
+    <div class="modal">
+      <div class="form">
+        <div class="title">
+          <h2>Welcome!</h2>
+        </div>
+        <div class="loginFacebook">
+          <img src="./assets/images/facebook.svg" alt="Facebook Icon">
+          Continue with Facebook
+        </div>
+        <div class="loginGoogle">
+          <img src="./assets/images/google.svg" alt="Google Icon">
+          Continue with Google
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="contentFooter">
+      <div class=contentAbout>
+        <h2>Infos</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatum culpa iure similique doloribus
+        voluptatem
+        provident eos totam.
+        <div class="contentSocial">
+          <a href="https://www.facebook.com/joalison.matheus.12/" target="_blank">
+            <img src="./assets/images/facebook 1.svg" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/joalison.matheus/" target="_blank">
+            <img src="./assets/images/instagram 1.svg" alt="Instagram">
+          </a>
+          <a href="https://www.linkedin.com/in/joalison-matheus-125781208/" target="_blank">
+            <img src="./assets/images/linkedin 1.svg" alt="LinkedIn">
+          </a>
+        </div>
+      </div>
+      <div class="contentNetwork">
+        <h2>About Us</h2>
+        <p><a href="">About</a></p>
+        <p><a href="">Functionalities</a></p>
+      </div>
+      <div class="contentContact">
+        <h2>Contact</h2>
+        <p>E-mail: joalisonmatheus@gmail.com</p>
+        <p>Phone: +5583991353102</p>
+      </div>
+    </div>
+    <div class="contentCoper">
+      © Coffee 2021
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="assets/js/scripts.js"></script>
+</body>
+
+</html>

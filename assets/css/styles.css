@@ -1,3 +1,4 @@
+/*================== GLOBAL ==================*/
 * {
   padding: 0;
   margin: 0;
@@ -22,18 +23,6 @@
   --red-google: #EA4335;
 }
 
-@media (max-width: 1080px) {
-  html {
-    font-size: 93.75%;
-  }
-}
-
-@media (max-width: 728px) {
-  html {
-    font-size: 87.5%;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--white);
@@ -54,13 +43,14 @@ a {
   text-decoration: none;
 }
 
-/*HEADER*/
+/*================== HEADER ==================*/
 .headerContainer {
   height: 5rem;
   border-bottom: 1px solid var(--gray-700);
 }
 
 .headerContent {
+  width: 90%;
   max-width: 1120px;
   height: 5rem;
   margin: 0 auto;
@@ -148,8 +138,9 @@ a {
   filter: brightness(0.8);
 }
 
-/*MAIN*/
+/*================== MAIN ==================*/
 .coffee {
+  width: 90%;
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -219,6 +210,7 @@ a {
 }
 
 .learnContainer {
+  width: 90%;
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -258,10 +250,11 @@ a {
   margin-left: 58px;
 }
 
+/* ================== MENU ==================*/
 .popularCoffeeContainer {
   background: var(--gray-800);
   width: 100%;
-  margin: 4rem 0 4rem 0;
+  margin: 4rem 0 0 0;
 
   display: flex;
   justify-content: center;
@@ -270,8 +263,9 @@ a {
 }
 
 .popularCoffeeContent {
+  width: 90%;
   max-width: 1120px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0 2rem;
 }
 
@@ -286,9 +280,8 @@ a {
 
 .popularCoffeeGrid {
   display: grid;
-  row-gap: 20px;
-  column-gap: 15px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
 
   align-items: center;
   justify-items: center;
@@ -298,7 +291,7 @@ a {
 }
 
 .coffeeGrid {
-  width: 340px;
+  width: 330px;
   height: 360px;
   background: var(--gray-750);
   border-radius: 8px;
@@ -353,7 +346,7 @@ a {
   filter: brightness(0.8);
 }
 
-/*MODAL ===================*/
+/*================== MODAL ===================*/
 .modal-overlay {
   width: 100%;
   height: 100%;
@@ -369,16 +362,18 @@ a {
   justify-content: center;
 
   opacity: 0;
-  visibility: hidden;
 
   z-index: 999;
 
-  transition: all 150ms ease-out;
+  transition: .1s;
+  visibility: hidden;
+  overflow-y: hidden;
 }
 
 .modal-overlay.active {
   opacity: 1;
   visibility:visible;
+  overflow-y: auto;
 }
 
 .modal {
@@ -395,7 +390,7 @@ a {
   cursor: pointer;
 }
 
-/* LOGIN ===================*/
+/*================== LOGIN ===================*/
 .form {
   margin-top: 1rem;
   max-width: 500px;
@@ -463,10 +458,8 @@ a {
   filter: brightness(0.8);
 }
 
-/*FOOTER ==================*/
-
+/*================== FOOTER ==================*/
 footer {
-  height: 100px;
   background: var(--background);
 }
 
@@ -475,9 +468,10 @@ footer h2 {
 }
 
 .contentFooter {
+  width: 90%;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 2rem 2rem;
+  padding: 3rem 2rem 2rem;
 
   display: flex;
   align-items: flex-start;
@@ -546,4 +540,348 @@ footer h2 {
   padding: 0.5rem 0;
   text-align: center;
   font-size: 0.8rem;
+}
+
+/*================== Menu Mobile ==================*/
+.menuMobile {
+  display: none;
+  width: 30px;
+  height: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.menuMobile .line {
+  height: 3px;
+  background-color: var(--white);
+}
+
+/*================== RESPONSIVE ==================*/
+@media (max-width: 1200px) {
+  .coffeeContent {
+    max-width: 600px;
+  }
+  .coffee img {
+    width: 450px;
+    height: 428px;
+  }
+}
+
+@media (max-width: 1155px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 1040px) {
+  .coffeeContent h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .coffee img {
+    width: 450px;
+    height: 428px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .item-content {
+    height: 130px;
+    padding: 0 2rem;
+  }
+  .item-content h2 {
+    font-size: 1rem;
+  }
+
+  .item-content div p {
+    font-size: 90%;
+  }
+
+  .item-content img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .popularCoffeeGrid {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .coffeeGrid {
+    width: 270px;
+    height: 290px;
+  }
+
+  .coffeeGrid .coffeeImg img {
+    width: 180px;
+    height: 150px;
+  }
+
+  .coffeeGrid .title, nav .value {
+    font-size: 1.5rem;
+  }
+
+  .coffeeGrid nav button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .coffeeGrid nav button img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  .coffeeContent {
+    max-width: 400px;
+  }
+
+  .coffeeContent h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .coffeeContent p {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+
+  .coffeeContent .infos .viewMenu {
+    width: 140px;
+    height: 3.5rem;
+  }
+
+  .coffeeContent .infos .about {
+    margin-left: 40px;
+  }
+
+  .coffee img {
+    width: 310px;
+    height: 295px;
+  }
+
+  .learnContainer {
+    display: none;
+  }
+
+  .popularCoffeeGrid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .coffeeGrid {
+    width: 200px;
+    height: 230px;
+  }
+
+  .coffeeGrid .coffeeImg img {
+    width: 120px;
+    height: 100px;
+  }
+
+  .coffeeGrid .title, nav .value {
+    font-size: 1.3rem;
+  }
+
+  footer {
+    font-size: 90%;
+  }
+
+  .contentFooter {
+    width: 90%;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+
+  .contentAbout {
+    width: 250px;
+  }
+
+  .contentSocial a img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .menuMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .headerContent nav ul {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 5rem;
+    right: 0;
+    background: var(--gray-700);
+    flex-direction: column;
+
+    transition: .6s;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  .headerContent nav.active ul {
+    height: calc(100vh - 5rem);
+    visibility: visible;
+    overflow-y: auto;
+    display: flex;
+  }
+
+  .headerContent nav ul li a {
+    padding: 1rem 1rem;
+  }
+
+  .headerContent nav button {
+    display: none;
+  }
+
+  .headerContent nav ul li + li {
+    margin-left: 0;
+  }
+
+  .coffee img {
+    display: none;
+  }
+
+  .item-content {
+    display: none;
+  }
+
+  .popularCoffeeGrid {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .coffeeGrid {
+    width: 160px;
+    height: 210px;
+  }
+
+  .coffeeGrid .coffeeImg img {
+    width: 80px;
+    height: 67px;
+  }
+
+  .coffeeGrid .title, nav .value {
+    font-size: 1.1rem;
+  }
+
+  .contentFooter {
+    display: none;
+  }
+
+  .contentCoper {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 375px) {
+
+  .popularCoffeeGrid {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .coffeeGrid {
+    width: 140px;
+    height: 210px;
+  }
+
+  .coffeeGrid .coffeeImg img {
+    width: 80px;
+    height: 67px;
+  }
+
+  .coffeeGrid .title, nav .value {
+    font-size: 1.1rem;
+  }
+
+  .contentFooter {
+    display: none;
+  }
+
+  .contentCoper {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .coffeeContent {
+    max-width: 400px;
+  }
+
+  .coffeeContent h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .coffeeContent p {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+
+  .coffeeContent .infos .viewMenu {
+    width: 140px;
+    height: 3.5rem;
+    font-size: 1rem;
+  }
+
+  .coffeeContent .infos .about {
+    font-size: 1rem;
+    margin-left: 40px;
+  }
+
+  .coffee img {
+    width: 310px;
+    height: 295px;
+  }
+
+  .popularCoffeeContent .titleContent {
+    font-size: 2rem;
+    text-align: center;
+
+    margin:2rem 0 4rem 0;
+  }
+
+  .popularCoffeeGrid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .coffeeGrid {
+    width: 150px;
+    height: 200px;
+  }
+
+  .coffeeGrid .coffeeImg img {
+    width: 60px;
+    height: 50px;
+  }
+
+  .coffeeGrid .title, nav .value {
+    font-size: 1.1rem;
+  }
+
+  .contentFooter {
+    display: none;
+  }
+
+  .contentCoper {
+    padding: 0.5rem 0;
+  }
 }

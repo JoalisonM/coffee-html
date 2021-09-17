@@ -864,17 +864,17 @@ footer h2 {
   }
 
   .coffeeGrid {
-    width: 150px;
-    height: 200px;
+    width: 200px;
+    height: 230px;
   }
 
   .coffeeGrid .coffeeImg img {
-    width: 60px;
-    height: 50px;
+    width: 100px;
+    height: 83px;
   }
 
   .coffeeGrid .title, nav .value {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 
   .contentFooter {
